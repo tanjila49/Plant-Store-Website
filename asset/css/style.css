@@ -50,7 +50,7 @@ body {
                 margin: 0 10px;
             }
         }
-        /* ==========================
+/* ==========================
         Navbar
 ========================== */
 .navbar {
@@ -70,7 +70,285 @@ body {
     background-color: #81ac49;
     transform: translateY(-2px);
 }
+
+/* ==========================
+        Banner Text
+========================== */
+.banner-image {
+    object-fit: cover;
+    filter: brightness(0.78);
+}
+
+.banner-caption {
+    left: 10%;
+    right: auto;
+    bottom: 18%;
+    max-width: 520px;
+    padding: 30px 36px;
+    text-align: left;
+    background: rgba(20, 72, 38, 0.78);
+    border-left: 5px solid #d9edb8;
+    border-radius: 0 14px 14px 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.banner-caption h5 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+.banner-caption p {
+    margin-bottom: 22px;
+    color: #f2f8e9;
+    font-size: 1.05rem;
+}
+
+.banner-caption .btn {
+    padding: 10px 24px;
+    border: 0;
+    border-radius: 30px;
+    background-color: #d9edb8;
+    color: #174c2a;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.banner-caption .btn:hover {
+    background-color: #ffffff;
+    color: #174c2a;
+    transform: translateY(-3px);
+}
+
+/* ==========================
+        Featured Plants
+========================== */
+.featured-plants {
+    background: linear-gradient(180deg, #f5f8ef 0%, #ffffff 100%);
+}
+
+.featured-heading .section-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #81ac49;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.featured-heading h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #214d2b;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.featured-heading h2::after {
+    content: '';
+    position: absolute;
+    width: 58px;
+    height: 4px;
+    left: 50%;
+    bottom: -10px;
+    border-radius: 5px;
+    background-color: #d49a45;
+    transform: translateX(-50%);
+}
+
+.featured-heading p {
+    max-width: 560px;
+    margin: 0 auto;
+    color: #68736a;
+}
+
+.plant-card {
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plant-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(45, 83, 48, 0.16) !important;
+}
+
+.plant-card-image {
+    transition: transform 0.45s ease;
+}
+
+.plant-card:hover .plant-card-image {
+    transform: scale(1.06);
+}
+
+.plant-card-body {
+    padding: 22px 18px 24px;
+}
+
+.plant-card-body .card-title {
+    color: #214d2b;
+    font-weight: 700;
+}
+
+.plant-card-body .card-text {
+    min-height: 50px;
+}
+
+.plant-card-body .btn {
+    border: 0;
+    border-radius: 24px;
+    padding: 9px 18px;
+    font-weight: 600;
+}
+/* ==========================
+        Why Choose us
+========================== */
+.choose-us {
+    background: linear-gradient(180deg, #f5f8ef 0%, #ffffff 100%);
+}
+.choose-heading h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #214d2b;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.choose-heading h2::after {
+    content: '';
+    position: absolute;
+    width: 58px;
+    height: 4px;
+    left: 50%;
+    bottom: -10px;
+    border-radius: 5px;
+    background-color: #d49a45;
+    transform: translateX(-50%);
+}
+
+.choose-heading p {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.choose-heading .section-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #81ac49;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.choose-feature-wrap {
+    perspective: 900px;
+    animation: featureReveal 0.8s ease both;
+}
+
+.choose-feature-wrap:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.choose-feature-wrap:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.choose-feature-wrap:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.choose-feature {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(129, 172, 73, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.choose-feature::before {
+    content: '';
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    top: -72px;
+    right: -48px;
+    border-radius: 50%;
+    background: rgba(217, 237, 184, 0.45);
+    transition: transform 0.45s ease;
+}
+
+.choose-feature:hover {
+    transform: translateY(-12px) rotateX(2deg);
+    box-shadow: 0 18px 35px rgba(45, 83, 48, 0.2) !important;
+}
+
+.choose-feature:hover::before {
+    transform: scale(1.6);
+}
+
+.choose-icon {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background: #edf6df;
+    box-shadow: 0 0 0 8px rgba(237, 246, 223, 0.7);
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.choose-icon i {
+    transition: transform 0.4s ease;
+}
+
+.choose-feature:hover .choose-icon {
+    background-color: #d9edb8;
+    transform: rotate(-8deg) scale(1.1);
+}
+
+.choose-feature:hover .choose-icon i {
+    transform: scale(1.2) rotate(8deg);
+}
+
+.choose-feature h5,
+.choose-feature p {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes featureReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .choose-feature-wrap,
+    .choose-feature,
+    .choose-feature::before,
+    .choose-icon,
+    .choose-icon i {
+        animation: none;
+        transition: none;
+    }
+}
         
 /* ==========================
         Footer
 ========================== */
+.nav-foot {
+    background-color: #edf3e2;
+}
